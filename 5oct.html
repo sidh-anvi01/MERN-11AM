@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is local storage class </h1>
+
+
+
+<input type="text" name="" id="name">
+<input type="text" name="" id="email">
+<input type="text" name="" id="password">
+<button onclick="saveData()">click</button>
+
+
+
+    <script>
+
+
+
+// localStorage.setItem("name" ,"rohan verma ")
+// localStorage.setItem("user" ,"mohan verma ")
+// localStorage.setItem("user2" ,"mohan verma ")
+// localStorage.setItem("user3" ,"mohan verma ")
+// localStorage.setItem("user4" ,"mohan verma ")
+// localStorage.setItem("user5" ,"mohan verma ")
+
+
+
+// name="rohan verma "
+
+// localStorage.setItem("userName", name)
+
+
+//  user= localStorage.getItem("userName") 
+// console.log(user)
+
+
+
+// user={
+//     name:"rohna",
+//     age:21,
+//     proffesion:"Er",
+//     email:"rohan@gmail.com"
+
+// }
+
+// localStorage.setItem("newUser", JSON.stringify(user))
+//    user= localStorage.getItem("newUser")
+
+//    console.log(JSON.parse(user))
+
+
+
+
+   function saveData(){
+    name=  document.getElementById("name").value 
+    email=  document.getElementById("email").value 
+    password=  document.getElementById("password").value 
+
+// localStorage.setItem("userName" ,name) 
+
+const user={
+    name:name,
+    email:email,
+    password:password,
+}
+
+localStorage.setItem("userData" ,JSON.stringify(user))
+
+ savedUser=localStorage.getItem("userData")
+
+
+console.log(JSON.parse(savedUser))
+
+
+
+   }
+
+
+   isLoggedIn=false
+
+   localStorage.setItem("isToken" ,isLoggedIn)
+
+isUser=localStorage.getItem("isToken") 
+
+ result= isUser==false ? "this is home page" :"this is login page"
+console.log(result)
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
