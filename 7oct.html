@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+  <!-- <form action="">
+      <input type="text" name="display" id="">
+
+
+
+    <input type="button" value="1" name="" id="" onclick="display.value+='1'">
+    <input type="button" value="2" name="" id="" onclick="display.value+='2'">
+    <input type="button" value="AC" name="" id="" onclick="display.value=''">
+    <input type="button" value="+" name="" id="" onclick="display.value+='+'">
+    <input type="button" value="=" name="" id="" onclick="display.value=eval(display.value)">
+    <input type="button" value="DEL" name="" id="" onclick="display.value=display.value.slice(0,-1)">
+
+  </form> -->
+
+
+
+  
+<button onclick="prev()">pre</button>
+<img src="" alt="" id="img" alt="no image" style="height: 400px;width: 500px;">
+<button onclick="next()">next</button>
+
+
+
+
+
+<script>
+
+
+images=[
+    "https://images.unsplash.com/photo-1791042146049-655617114644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8","https://images.unsplash.com/photo-1790997086052-1aa2b246f076?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8","https://images.unsplash.com/photo-1791114744070-f4806d5349af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1791115105982-52a387f763ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D"
+]
+
+
+currentIndex=0
+
+
+function showImage(){
+    document.getElementById("img").src=images[currentIndex]
+
+}
+
+function next(){
+    currentIndex=(currentIndex+1+images.length)%images.length
+    showImage()
+}
+
+function prev(){
+    currentIndex=(currentIndex-1)%images.length
+    showImage()
+}
+
+
+</script>
+
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
