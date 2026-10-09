@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" name="" id="list">
+    <button onclick="add()">add task</button>
+
+
+    <ul id="items ">
+
+    </ul>
+
+
+    <script>
+
+        function add() {
+            inpuValue = document.getElementById("list").value
+
+            if (!inpuValue) {
+                alert("please enter the task ")
+            }
+
+            document.getElementById("list").value = ""
+            let li = document.createElement("li")
+            let textNode = document.createTextNode(inpuValue)
+
+            li.appendChild(textNode)
+
+
+            let editbtn=document.createElement("button")
+            editbtn.appendChild(document.createTextNode("EDIT"))
+            li.appendChild(editbtn)
+
+
+              let delbtn=document.createElement("button")
+            delbtn.appendChild(document.createTextNode("DELETE"))
+            li.appendChild(delbtn)
+
+
+            document.getElementById("items").appendChild(li)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
